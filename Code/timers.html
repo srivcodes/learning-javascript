@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function buzzer(){
+            console.log("eeeeerrrgh")
+        }
+
+        // function buzzer2(){
+        //     console.log("from buzzer 2")
+        // }
+        // setTimeout(function(){console.log("done")},2000);
+
+        // // Async nature of Javascript 
+        // console.log("starting");
+        // setTimeout( buzzer , 2000 );
+        // console.log("finishing");
+
+        // setInterval( buzzer2 , 2000);
+
+        // function immediateInterval(functorun , ms){
+        //     functorun();
+        //     setInterval(functorun,ms);
+        // }
+        // immediateInterval( buzzer2 , 2000);
+
+        function destroy(){
+            document.body.innerHTML = `<p>HACKED</p>`;
+        }
+
+        const ticker = setTimeout( destroy , 5000);
+
+        window.addEventListener("click", function(){console.log("SAFE");
+     clearTimeout(ticker);
+    });
+    </script>
+</body>
+</html>

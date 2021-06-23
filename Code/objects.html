@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <!-- <script src="https://unpkg.com/lodash"></script> -->
+    <script>
+        //cannot trust order of properties in an object
+        const myname = "srivi";
+        const person = {
+            name: myname,
+            age: 120,
+            'cool-name': true,
+            '777': false,
+            //nested objects!!!!
+            clothing: {
+                shirts: 15,
+                trousers: 15,
+            },
+            sayHello : function (greeting = "heyy") {
+                return `${greeting} ${this.name}`;
+            },
+        };
+
+        // person.id = "cleared";
+        //overwriting a property
+        // person.age = 32;
+        // console.log(person);
+
+        // const personFroze = Object.freeze(person);
+
+        // console.log(personFroze);
+        // console.log(person);
+        // const propertyLookup = prompt("which property?");
+        // console.log(propertyLookup)
+        // // console.log(person.clothing.shirts);
+        // console.log(person[propertyLookup]);
+        // console.log(person['cool-name']);
+
+        // console.log(person?.clothing?.shirts);
+        // console.log(person?.clothing?.skirts);
+
+        // console.log(delete person.id);
+        // console.log(person);
+
+            // const person3 = _.cloneDeep(person);
+
+            // person3.clothing.shirts = 300 ;
+
+        const makeasubnv = {
+            bacon: 2,
+            ham: 3,
+        };
+
+        const makeasubv = {
+            tomatoes: 5,
+            cucumber: 5,
+        };
+
+        const mixsub = {...makeasubnv,...makeasubv, corn: 30, sausage: 1,};
+
+
+    </script>
+</body>
+</html>

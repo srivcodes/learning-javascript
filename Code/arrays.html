@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <link rel="stylesheet" href="base.css">
+</head>
+<body>
+    <script>
+        // const names = ['srivi','nonu','golu','last one'];
+        // console.log(names[2]);
+        // console.log(names.length);
+        // console.log(names[names.length - 1]);
+
+        // names.push('chandler');
+        // console.log(names);
+
+        // const names2  = [...names, 'monica','rachel'];
+        // console.log(names2);
+        // names2.unshift('poppy');
+        // console.log(names2);
+
+        // const nums = [1,2,3,4,5,6,7,8,9];
+        // console.log(nums);
+        // nums.splice(3,2);
+        // console.log(nums);
+
+        // const cars = ['honda','ferrari','harrier','ecosport','ultron'];
+        // const newcars = [...cars.slice(0,2),'kia sonnet',...cars.slice(2)];
+        // console.log(newcars);
+
+
+        //mutation methods - change the original array
+        // const nums = [1,2,3,4,5,6,7,8,9];
+
+        // const reversenum = [...nums].reverse();
+        // // const numrev = nums.reverse();
+        // // console.log(numrev);
+        // console.log(reversenum);
+        // console.log(nums);
+
+        // //immutable methods
+        // const newarr = nums.slice(2,5);
+        // console.log(newarr);
+        // console.log(nums);
+
+        const comments = [
+            {id: 100, text: "ringa ringa roses"},
+            {id: 200, text: "pocket full of posies"},
+            {id:300, text:"ashes ashes"},
+            {id:400, text:"we all fall down"},
+            {id:500, text:"jack and jill"},
+        ];
+
+        function deleteComment(id,comments){
+            const commIndex = comments.findIndex(comment => comment.id === id);
+            return [...comments.slice(0,commIndex),
+        ...comments.slice(commIndex + 1),];
+        }
+    </script>
+</body>
+</html>

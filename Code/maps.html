@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps</title>
+    <link rel="stylesheet" href="base.css">
+</head>
+<body>
+    <script>
+        const zoo = {
+            name: "dodo",
+            age: "noage..superdead",
+        }
+        const myMap = new Map();
+        myMap.set("name","srivi");
+        myMap.set(100,"this is a value");
+        myMap.set(zoo , "this is an extinct bird");
+        console.log(myMap);
+
+        console.log(myMap.get(zoo));
+
+        const animal = "crows";
+        const howMany = new Map();
+        howMany.set("crows", "not extinct");
+        howMany.set("pandas","endangered");
+        howMany.set("tigers","super endangered");
+        console.log(`this animal is ${howMany.get(animal)}`);
+    </script>
+</body>
+</html>
