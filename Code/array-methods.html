@@ -46,50 +46,118 @@
 
     // Array.of();
 
-    // Make a function that creates a range from x to y with Array.from();
+    // Array.of('chris','poppy','shane','nick');
+    // // Make a function that creates a range from x to y with Array.from();
+    // function createRange(x,y){
 
-    // Check if the last array you created is really an array with Array.isArray();
+    //     const range = Array.from({length: y-x + 1}, function(item,index){return index + x;});
+    //     return range;
+    // }
 
-    // Take the meats object and make three arrays with Object.entries(), Object.keys, Object.values()
-
+    // const crick = createRange(3,10);
+    // console.log(crick);
+    // // Check if the last array you created is really an array with Array.isArray();
+    // const check = Array.isArray(crick);
+    // console.log(check);
+    // // Take the meats object and make three arrays with Object.entries(), Object.keys, Object.values()
+    // console.log(Object.entries(meats));
+    // console.log(Object.keys(meats));
+    // console.log(Object.values(meats));
     /*
       Instance Methods
     */
 
-    // Display all bun types with " or " - use join()
-
-    // We have a string "hot dogs,hamburgers,sausages,corn" - use split() to turn it into a string
-
-    // take the last item off toppings with pop()
-    // add it back with push()
-    // take the first item off toppings with shift()
+    // // Display all bun types with " or " - use join()
+    // console.log(buns);
+    // console.log(buns.join(' or '));
+    // // We have a string "hot dogs,hamburgers,sausages,corn" - use split() to turn it into a string
+    // const ourstring = "hot dogs,hamburgers,sausages,corn";
+    // console.log(ourstring.split(','));
+    // // take the last item off toppings with pop()
+    // console.log(toppings.pop());
+    // console.log(toppings);
+    // // add it back with push()
+    // console.log(toppings);
+    // toppings.push('cheese');
+    // console.log(toppings);
+    // // take the first item off toppings with shift()
+    // const firstitem = toppings.shift();
+    // console.log(firstitem);
     // add it back in with unshift()
+    // toppings.unshift(firstitem);
     // Do the last four,but immutable (with spreads and new variables)
+    // const newtoppings = toppings.slice(0,toppings.length - 1);
+    // console.log(newtoppings);
+
+    // const addingnew = [...newtoppings,'cheese'];
+    // console.log(addingnew);
+
+    // const newtopping = toppings.slice(1,toppings.length-1);
+    // console.log(newtopping);
 
 
     // Make a copy of the toppings array with slice()
+    // const copyToppings = toppings.slice(0,toppings.length);
+    // console.log(copyToppings);
     // Make a copy of the toppings array with a spread
+    // const copyToppings = [...toppings];
+    // console.log(copyToppings);
     // take out items 3 to 5 of your new toppings array with splice()
+    // const newToppings = toppings.splice(3,5);
+    // console.log(newToppings);
     // find the index of Avocado with indexOf() / lastIndexOf()
+    // const avo = lastIndexOf('Avacado');
+    // console.log(avo);
     // Check if hot sauce is in the toppings with includes()
+        // console.log(toppings.includes('hot sauce'));
     // add it if it's not
+    // const addtopp = [...toppings, 'hot sauce'];
+    // console.log(addtopp);
     // flip those toppings around with reverse()
-
+        // const toppingrev = toppings.reverse();
+        // console.log(toppingrev);
     /*
       Callback Methods
     */
 
     // find the first rating that talks about a burger with find()
+    // const ratingFind = feedback.find(feedbacks => feedbacks.comment.includes('burg'));
+    // console.log(ratingFind);
     // find all ratings that are above 2 with filter()
+
+        // const abovetwo = feedback.filter(rates => {
+        //     if(rates.rating >= 2){
+        //         return true;
+        //     }else{
+        //         return false;
+        //     }
+        // });
+        // console.table(abovetwo);
     // find all ratings that talk about a burger with filter()
+    // const above = feedback.filter((rates => rates.rating >=2) && (rates => rates.comment.includes('burg')));
+    // console.table(above);
     // Remove the one star rating however you like!
-
+            // const removeOneStar = feedback.filter(lines => lines.rating !== 1);
+            // console.table(removeOneStar);
     // check if there is at least 5 of one type of meat with some()
+    const checker = Object.values(meats).some(meatVal => meatVal >= 5);
+    console.log(checker);
     // make sure we have at least 3 of every meat with every()
+    const checker2 = Object.values(meats).every(meatVal => meatVal >= 3);
+    console.log(checker2);
     // sort the toppings alphabetically with sort()
+    const sortedToppings = toppings.sort();
+    console.log(sortedToppings)
     // sort the order totals from most expensive to least with .sort()
+    const sortedOrder = orderTotals.sort((item1,item2) => item2 - item1);
+    console.log(sortedOrder);
     // Sort the prices with sort()
-
+    const sortPrice = Object.entries(prices).sort(function(a,b){
+       const aprice = a[1];
+       const bprice = b[1];
+       return aprice - bprice;
+    });
+    console.table(sortPrice);
     /*
       Looping Methods (next)
     */
